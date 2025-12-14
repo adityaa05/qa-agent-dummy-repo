@@ -1,0 +1,10 @@
+{
+  "status": "success",
+  "source": "repo",
+  "config": {
+    "regression_strategy": "targeted",
+    "critical_paths": ["src/auth", "src/payments"],
+    "coverage_threshold": 90,
+    "jira_project_key": "PAY"
+  }
+}
