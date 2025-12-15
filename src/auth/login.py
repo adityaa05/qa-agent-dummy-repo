@@ -1,3 +1,3 @@
 def login(user, password):
-    print("Logging in...")
+    print("Enter details to login")
     return True
