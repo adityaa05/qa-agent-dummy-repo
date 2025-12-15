@@ -1,10 +1,16 @@
 {
-  "status": "success",
-  "source": "repo",
-  "config": {
-    "regression_strategy": "targeted",
-    "critical_paths": ["src/calculator.py"],
-    "coverage_threshold": 90,
-    "jira_project_key": "PAY"
+  "repo_url": "https://github.com/adityaa05/qa-agent-dummy-repo",
+  "stakeholder_emails": ["patiladityaa09@gmail.com"],
+  "coverage_threshold": 90,
+  "approval_required": true,
+  "jira_project_key": "PAY",
+  "critical_paths": [
+    "src/auth",
+    "src/payments",
+    "src/security"
+  ],
+  "regression_strategy": {
+    "default_mode": "targeted",
+    "max_test_percentage": 5
   }
 }
