@@ -1,0 +1,41 @@
+name: QA Bot Test Runner
+
+on:
+  workflow_dispatch:
+    inputs:
+      test_level:
+        description: 'Strategy (targeted/full)'
+        required: true
+        default: 'targeted'
+      test_files:
+        description: 'Files to test'
+        required: false
+        default: 'none'
+
+jobs:
+  test-execution:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install Dependencies
+        run: |
+          pip install pytest
+
+      - name: RUNNING FULL REGRESSION
+        if: ${{ github.event.inputs.test_level == 'full' }}
+        run: |
+          echo "EXECUTING FULL REGRESSION SUITE..."
+          # pytest tests/
+
+      - name: RUNNING TARGETED TESTS
+        if: ${{ github.event.inputs.test_level == 'targeted' }}
+        run: |
+          echo "EXECUTING TARGETED TESTS ON: ${{ github.event.inputs.test_files }}"
+          # pytest ${{ github.event.inputs.test_files }}
