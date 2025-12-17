@@ -5,7 +5,6 @@
   "approval_required": true,
   "jira_project_key": "PAY",
   "critical_paths": [
-    "src/auth",
     "src/payments",
     "src/security"
   ],
