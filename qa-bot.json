@@ -3,7 +3,7 @@
   "stakeholder_emails": ["patiladityaa09@gmail.com"],
   "coverage_threshold": 90,
   "approval_required": true,
-  "jira_project_key": "PAY",
+  "jira_project_key": "AAT-1",
   "critical_paths": [
     "src/payments",
     "src/security"
