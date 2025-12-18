@@ -3,13 +3,30 @@
   "stakeholder_emails": ["patiladityaa09@gmail.com"],
   "coverage_threshold": 90,
   "approval_required": true,
-  "jira_project_key": "AAT-1",
+  "jira_project_key": "AAT",
   "critical_paths": [
-    "src/payments",
-    "src/security"
+    "src/payments/",
+    "src/security/",
+    "src/auth/",
+    ".github/workflows/"
   ],
   "regression_strategy": {
     "default_mode": "targeted",
-    "max_test_percentage": 5
+    "max_test_percentage": 30,
+    "full_regression_triggers": [
+      "critical_path_detected",
+      "impact_radius_over_20",
+      "schema_changes"
+    ]
+  },
+  "test_execution": {
+    "timeout_minutes": 120,
+    "parallel_execution": true,
+    "max_retries": 2
+  },
+  "notification_preferences": {
+    "send_on_success": false,
+    "send_on_failure": true,
+    "send_on_manual_approval": true
   }
 }
