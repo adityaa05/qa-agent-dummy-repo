@@ -5,7 +5,7 @@
   "approval_required": true,
   "jira_project_key": "AAT-1",
   "critical_paths": [
-    "src/auth",      // ← ADDED
+    "src/auth",
     "src/payments",
     "src/security"
   ],
