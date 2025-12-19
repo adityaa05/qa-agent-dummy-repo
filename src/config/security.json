@@ -1,0 +1,21 @@
+{
+  "rateLimiting": {
+    "enabled": true,
+    "maxAttempts": 5,
+    "windowMinutes": 15,
+    "lockoutDuration": 60,
+    "whitelist": [
+      "127.0.0.1",
+      "::1"
+    ]
+  },
+  "accountLockout": {
+    "enabled": true,
+    "maxFailedAttempts": 10,
+    "lockoutDurationMinutes": 60
+  },
+  "monitoring": {
+    "alertThreshold": 100,
+    "alertEmail": "security@example.com"
+  }
+}
